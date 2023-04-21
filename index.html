@@ -1,27 +1,22 @@
 <!doctype html>
 <html>
-    <head>
-      <title>Our Funky HTML Page</title>
-      <meta name="description" content="'Our first page">
-    </head>
+  <head>
+    <title>Our Funky HTML Page</title>
+    <meta name="description" content="Our first page">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-    <body>
-      <h1>Welcome to my HTML page!</h1>
-      <p>Hello!My Name is Diego,I am a student currently in my second year at UC Santa Cruz as a Computer Science Major.</p>
-      <a href= "https://github.com/OceanBIvd"><img src = "git.png" alt="My Github" width="50" height="50"  ></a>
-      <h2> Projects </h2>
-      <dl> 
-        <dt><a href = "https://codepen.io/OceanBIvd/pen/Poyqdzo"> Task 1 Codepen </a></dt>
-        <dd> A link to my Task 1 in codepen project </dd>
-
-        <dt><a href = "https://codepen.io/OceanBIvd/pen/QWZjMgK"> Task 2 Codepen</a></dt>
-        <dd> A link to my Task 2 in codepen project</dd>
-
-         <dt><a href = "https://codepen.io/OceanBIvd/pen/zYmvdEW"> Task 3 Codepen</a></dt>
-          <dd> A link to my Task 3 in codepen project</dd>
-
-          <dt><a href = "https://github.com/OceanBIvd"> Github </a></dt>
-          <dd> A link to my personal Github that shows my work</dd>
-      </dl>
-    </body>
+  <body>
+    <h1 class="header" id="main-header">Welcome to my HTML page!</h1>
+    <p id="introparagraph">Hello! My Name is Diego, I am a student currently in my second year at UC Santa Cruz as a Computer Science Major.</p>
+    <div class="icon-links">
+      <a href="https://github.com/OceanBIvd" class="icon-link" id="github-icon"><img src="git.png" alt="My Github"></a>
+      <a href="https://www.linkedin.com/in/diego-yanez-9162171b3" class="icon-link" id="linkedin-icon"><img src="link.png" alt="My LinkedIn"></a>
+    </div>
+    <h2 class="header" id="projects-header">Projects</h2>
+    <dl> 
+      <dt><a href="https://github.com/OceanBIvd">My Weather App</a></dt>
+      <dd>A link to my Weather App that displays the forecast. Made using HTML, CSS, and JavaScript.</dd>
+    </dl>
+  </body>
 </html>
