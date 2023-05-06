@@ -38,4 +38,4 @@ console.log("Street Address:", data.address.street);
 console.log("City:", data.address.city);
 console.log("State:", data.address.state);
 console.log("Zip Code:", data.address.zip);
-console.log("Second Education Entry Degree:", data.education[1].degree);
+console.log("Degree:", data.education[1].degree);
