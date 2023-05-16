@@ -14,8 +14,8 @@ app.get('/weather/:lat/:lon', (req, res) => {
   //res.send('Hello World!');
   console.log("welcome to the root!");
   
-  const lat = req.params.lat;
-  const lon = req.params.lon;
+  var lat = req.params.lat;
+  var lon = req.params.lon;
   var url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`;
   
   
@@ -27,11 +27,11 @@ app.get('/weather/:lat/:lon', (req, res) => {
 		// Printing status code
 		console.log(response.statusCode);
 
-        const parsedBody = JSON.parse(body);
+        body = JSON.parse(body);
 		let weatherStatus = body.weather[0].main
-		res.send({"temperature" : parsedBody.main.temp, "weatherStatus" : weatherStatus})
+		res.send({"temperature" : body.main.temp, "weatherStatus" : weatherStatus})
 		// Printing body
-		console.log(parsedBody.main.temp);
+		console.log(body.main.temp);
 	});
   
 });
@@ -65,7 +65,7 @@ app.get('/5day/:lat/:lon', (req, res) => {
 		for (let i = 0; i < 5; i++){
 			let tempSum = 0
 			let count = 0
-			for (let  dataPoint of body.list){ 
+			for (const  dataPoint of body.list){ 
 				let date = new Date(dataPoint.dt * 1000) 
 				if (date.getDay() == todaysDate ){ 
 					count++; // Add 1 to the total data points
